@@ -58,7 +58,6 @@ def recommend(movie):
         #poster fetch from API
         recommended_movies.append(movies.iloc[i[0]].title)
     return recommended_movies
-# similarity=pickle.load(open('similar.pkl','rb'))
 movies_dict=pickle.load(open('movies_dict.pkl','rb'))
 movies =pd.DataFrame(movies_dict)
 cv = CountVectorizer(max_features=5000, stop_words='english')
